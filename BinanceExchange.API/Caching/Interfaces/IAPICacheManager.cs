@@ -11,7 +11,7 @@ namespace BinanceExchange.API.Caching.Interfaces
         /// <param name="obj">The object to add</param>
         /// <param name="key">The key to identify the cache entry</param>
         /// <param name="expiry">When the cache should expire</param>
-        void Add<T>(T obj, string key, TimeSpan expiry = default(TimeSpan)) where T : class;
+        void Add<T>(T obj, string key, TimeSpan expiry = default) where T : class;
 
         /// <summary>
         /// Retrieve an item from the cache

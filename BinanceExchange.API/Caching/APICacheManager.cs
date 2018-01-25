@@ -30,10 +30,10 @@ namespace BinanceExchange.API.Caching
         /// <param name="obj">The object to add</param>
         /// <param name="key">The key to identify the cache entry</param>
         /// <param name="expiry">When the cache should expire</param>
-        public void Add<T>(T obj, string key, TimeSpan expiry = default(TimeSpan)) where T : class
+        public void Add<T>(T obj, string key, TimeSpan expiry = default) where T : class
         {
             Guard.AgainstNullOrEmpty(key);
-            if (expiry == default(TimeSpan))
+            if (expiry == default)
             {
                 expiry = _defaultExpiryTimespan;
             }

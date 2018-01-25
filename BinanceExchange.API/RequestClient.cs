@@ -31,7 +31,9 @@ namespace BinanceExchange.API
         private static ILog _logger;
         private static readonly object LockObject = new object();
 
+#pragma warning disable CA1810 // Initialize reference type static fields inline
         static RequestClient()
+#pragma warning restore CA1810 // Initialize reference type static fields inline
         {
             var httpClientHandler = new HttpClientHandler
             {

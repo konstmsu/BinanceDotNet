@@ -2,7 +2,7 @@
 
 namespace BinanceExchange.API.Utility
 {
-    public class Guard
+    public static class Guard
     {
         public static void AgainstNullOrEmpty(string param, string name = null)
         {

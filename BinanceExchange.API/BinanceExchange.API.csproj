@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net451;net452;net461;</TargetFrameworks>
+    <TargetFramework>net471</TargetFramework>
     <Version>4.0.1</Version>
     <Description>The Binance CryptoCurrency exchange C# wrapper of the API. It is built in dotnet core, supports all REST and WebSocket endpoints, has full logging capabilities, a built in Cache for selected endpoints, a Rate limiter and more. Enjoy Binance API data, fast and reliably.</Description>
     <Title>Binance Cryptocurrency Exchange - C# API in .NET</Title>
@@ -18,9 +18,8 @@
     <AssemblyVersion>4.0.1.0</AssemblyVersion>
     <FileVersion>4.0.1.0</FileVersion>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <LangVersion>7.1</LangVersion>
+    <NoWarn>1701;1702;1705;CA1822;CA1820;CA1034;CA1032</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="log4net" Version="2.0.8" />

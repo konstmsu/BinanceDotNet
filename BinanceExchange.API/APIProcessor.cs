@@ -161,8 +161,7 @@ namespace BinanceExchange.API
             var fullKey = $"{typeof(T).Name}-{endpoint.Uri.AbsoluteUri}";
             if (_cacheEnabled && endpoint.UseCache)
             {
-                T item;
-                if (CheckAndRetrieveCachedItem<T>(fullKey, out item))
+                if (CheckAndRetrieveCachedItem<T>(fullKey, out T item))
                 {
                     return item;
                 }
@@ -194,8 +193,7 @@ namespace BinanceExchange.API
             var fullKey = $"{typeof(T).Name}-{endpoint.Uri.AbsoluteUri}";
             if (_cacheEnabled && endpoint.UseCache)
             {
-                T item;
-                if (CheckAndRetrieveCachedItem<T>(fullKey, out item))
+                if (CheckAndRetrieveCachedItem<T>(fullKey, out T item))
                 {
                     return item;
                 }
@@ -228,8 +226,7 @@ namespace BinanceExchange.API
             var fullKey = $"{typeof(T).Name}-{endpoint.Uri.AbsoluteUri}";
             if (_cacheEnabled && endpoint.UseCache)
             {
-                T item;
-                if (CheckAndRetrieveCachedItem<T>(fullKey, out item))
+                if (CheckAndRetrieveCachedItem<T>(fullKey, out T item))
                 {
                     return item;
                 }
