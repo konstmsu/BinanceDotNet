@@ -160,12 +160,7 @@ namespace BinanceExchange.API.Client
         public async Task<List<KlineCandleStickResponse>> GetKlinesCandlesticks(GetKlinesCandlesticksRequest request)
         {
             Guard.AgainstNull(request.Symbol);
-            Guard.AgainstDateTimeMin(request.StartTime);
-            Guard.AgainstDateTimeMin(request.EndTime);
-            if (request.Limit == 0 || request.Limit > 500) 
-            {
-                request.Limit = 500;
-            }
+            Guard.AgainstNull(request.Interval);
 
             return await _apiProcessor.ProcessGetRequest<List<KlineCandleStickResponse>>(Endpoints.MarketData.KlineCandlesticks(request));
         }

@@ -4,6 +4,7 @@ namespace BinanceExchange.API.Enums
 {
     public enum KlineInterval
     {
+        None,
         [EnumMember(Value = "1m")] OneMinute,
         [EnumMember(Value = "3m")] ThreeMinutes,
         [EnumMember(Value = "5m")] FiveMinutes,
